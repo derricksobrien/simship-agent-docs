@@ -1,0 +1,46 @@
+site_name: SimShip Agent v2 Documentation
+site_description: Complete documentation for SimShip Content Reuse Agent
+site_author: SimShip Team
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: blue
+    accent: cyan
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+
+nav:
+  - Home: index.md
+  - Start Here: SIMSHIP_AGENT_V2_START_HERE.md
+  - Analysis & Overview: SIMSHIP_AGENT_V2_ANALYSIS_README.md
+  - Status Report: SIMSHIP_AGENT_V2_STATUS.md
+  - Gap Analysis: SIMSHIP_AGENT_V2_GAP_ANALYSIS.md
+  - Implementation Checklist: SIMSHIP_AGENT_V2_IMPLEMENTATION_CHECKLIST.md
+  - Feature Matrix: SIMSHIP_AGENT_V2_FEATURE_MATRIX.md
+  - Delivery Summary: SIMSHIP_AGENT_V2_DELIVERY_SUMMARY.md
+
+plugins:
+  - search
+  - dark-mode
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - admonition
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/simship-agent-docs
+
+copyright: Copyright &copy; 2026 SimShip Team
