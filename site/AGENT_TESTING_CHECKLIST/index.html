@@ -1,0 +1,1848 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete documentation for SimShip Content Reuse Agent">
+      
+      
+        <meta name="author" content="SimShip Team">
+      
+      
+        <link rel="canonical" href="https://derricksobrien.github.io/simship-agent-docs/AGENT_TESTING_CHECKLIST/">
+      
+      
+        <link rel="prev" href="../PRIORITY_FEATURES_AND_TEST_CASES/">
+      
+      
+        <link rel="next" href="../COPILOT_STUDIO_BUILD_GUIDE/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Agent Testing Checklist - SimShip Agent v2 Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#simship-digital-asset-finder-agent-testing-checklist" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SimShip Agent v2 Documentation" class="md-header__button md-logo" aria-label="SimShip Agent v2 Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SimShip Agent v2 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Agent Testing Checklist
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SimShip Agent v2 Documentation" class="md-nav__button md-logo" aria-label="SimShip Agent v2 Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SimShip Agent v2 Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_START_HERE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start Here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_ANALYSIS_README/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis & Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_STATUS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_GAP_ANALYSIS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_IMPLEMENTATION_CHECKLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementation Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_FEATURE_MATRIX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feature Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_DELIVERY_SUMMARY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PRIORITY_FEATURES_AND_TEST_CASES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Priority Features & Test Cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Testing Checklist
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Testing Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#test-suite-1-topic-1-search-digital-assets-12-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEST SUITE 1: TOPIC 1 - SEARCH DIGITAL ASSETS (12 Tests)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEST SUITE 1: TOPIC 1 - SEARCH DIGITAL ASSETS (12 Tests)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t11-search-by-exact-asset-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1.1: Search by Exact Asset Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t12-search-by-asset-type-presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1.2: Search by Asset Type - Presentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t13-search-by-asset-type-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1.3: Search by Asset Type - Document
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t14-search-by-asset-type-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1.4: Search by Asset Type - Video
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t15-search-by-asset-type-spreadsheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1.5: Search by Asset Type - Spreadsheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t16-search-by-keyword-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1.6: Search by Keyword - "Guidelines"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t17-search-by-keyword-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1.7: Search by Keyword - "Overview"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t18-search-returns-correct-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1.8: Search Returns Correct Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t19-search-with-no-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1.9: Search with No Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t110-search-results-limited-to-top-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1.10: Search Results Limited to Top 10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t111-search-offers-log-reuse-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1.11: Search Offers Log Reuse Option
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t112-search-allows-no-to-reuse-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1.12: Search Allows "No" to Reuse Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-suite-2-topic-2-log-content-reuse-15-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEST SUITE 2: TOPIC 2 - LOG CONTENT REUSE (15 Tests)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEST SUITE 2: TOPIC 2 - LOG CONTENT REUSE (15 Tests)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t21-log-reuse-q1-2026-sales-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.1: Log Reuse - Q1 2026 Sales Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t22-log-reuse-employee-onboarding-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.2: Log Reuse - Employee Onboarding Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t23-verify-dataverse-record-created-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.3: Verify Dataverse Record Created - Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t24-verify-dataverse-record-asset-lookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.4: Verify Dataverse Record - Asset Lookup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t25-verify-dataverse-record-username" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.5: Verify Dataverse Record - Username
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t26-verify-dataverse-record-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.6: Verify Dataverse Record - Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t27-verify-dataverse-record-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.7: Verify Dataverse Record - Date
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t28-verify-dataverse-record-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.8: Verify Dataverse Record - Hours
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t29-verify-dataverse-record-amount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.9: Verify Dataverse Record - Amount
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t210-log-reuse-asset-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.10: Log Reuse - Asset Not Found
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t211-log-reuse-zero-hours-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.11: Log Reuse - Zero Hours Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t212-log-reuse-large-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.12: Log Reuse - Large Numbers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t213-log-reuse-special-characters-in-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.13: Log Reuse - Special Characters in Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t214-log-reuse-multiple-records-same-asset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.14: Log Reuse - Multiple Records Same Asset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t215-log-reuse-navigate-to-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2.15: Log Reuse - Navigate to Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-suite-3-topic-3-view-reuse-statistics-10-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEST SUITE 3: TOPIC 3 - VIEW REUSE STATISTICS (10 Tests)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEST SUITE 3: TOPIC 3 - VIEW REUSE STATISTICS (10 Tests)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t31-view-statistics-q1-2026-sales-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T3.1: View Statistics - Q1 2026 Sales Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t32-view-statistics-single-use-asset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T3.2: View Statistics - Single Use Asset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t33-view-statistics-asset-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T3.3: View Statistics - Asset Not Found
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t34-view-statistics-verify-count-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T3.4: View Statistics - Verify Count Calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t35-view-statistics-verify-hours-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T3.5: View Statistics - Verify Hours Sum
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t36-view-statistics-verify-value-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T3.6: View Statistics - Verify Value Sum
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t37-view-statistics-last-used-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T3.7: View Statistics - Last Used Date
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t38-view-statistics-response-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T3.8: View Statistics - Response Formatting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t39-view-statistics-currency-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T3.9: View Statistics - Currency Formatting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t310-view-statistics-search-again-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T3.10: View Statistics - Search Again Option
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-suite-4-conversation-flow-7-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEST SUITE 4: CONVERSATION FLOW (7 Tests)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEST SUITE 4: CONVERSATION FLOW (7 Tests)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t41-agent-greeting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T4.1: Agent Greeting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t42-off-topic-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T4.2: Off-Topic Question
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t43-navigate-search-to-reuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T4.3: Navigate Search to Reuse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t44-navigate-reuse-to-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T4.4: Navigate Reuse to Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t45-cancel-mid-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T4.5: Cancel Mid-Topic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t46-exit-conversation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T4.6: Exit Conversation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t47-error-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T4.7: Error Recovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-suite-5-dataverse-integration-3-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEST SUITE 5: DATAVERSE INTEGRATION (3 Tests)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TEST SUITE 5: DATAVERSE INTEGRATION (3 Tests)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t51-connection-health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T5.1: Connection Health Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t52-query-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T5.2: Query Performance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t53-data-integrity-reuse-log-to-digital-asset-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T5.3: Data Integrity - Reuse Log to Digital Asset Relationship
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SUMMARY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overall-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OVERALL STATUS
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COPILOT_STUDIO_BUILD_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copilot Studio Build Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="simship-digital-asset-finder-agent-testing-checklist">SimShip Digital Asset Finder - Agent Testing Checklist<a class="headerlink" href="#simship-digital-asset-finder-agent-testing-checklist" title="Permanent link">&para;</a></h1>
+<p><strong>Agent Name:</strong> SimShip Digital Asset Finder<br />
+<strong>Test Date:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><em><br />
+<strong>Tester Name:</strong> <strong><em>_</em></strong><strong><em>_</em></strong></em><br />
+<strong>Environment:</strong> SimShip Test<br />
+<strong>Status:</strong> Ready for Testing</p>
+<hr />
+<h2 id="test-suite-1-topic-1-search-digital-assets-12-tests">TEST SUITE 1: TOPIC 1 - SEARCH DIGITAL ASSETS (12 Tests)<a class="headerlink" href="#test-suite-1-topic-1-search-digital-assets-12-tests" title="Permanent link">&para;</a></h2>
+<h3 id="t11-search-by-exact-asset-name">T1.1: Search by Exact Asset Name<a class="headerlink" href="#t11-search-by-exact-asset-name" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Open agent</li>
+<li>Type: "Search for digital assets"</li>
+<li>Select type: "Presentation"</li>
+<li>Enter keyword: "Q1 2026 Sales Strategy"</li>
+<li><strong>Expected Result:</strong> Returns "Q1 2026 Sales Strategy" with full description and URL</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t12-search-by-asset-type-presentation">T1.2: Search by Asset Type - Presentation<a class="headerlink" href="#t12-search-by-asset-type-presentation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger: "Show me Presentation assets"</li>
+<li>Select: "Presentation" type</li>
+<li>Keyword: Leave blank or "any"</li>
+<li><strong>Expected Result:</strong> Returns all Presentation type assets (Q1 2026 Sales Strategy)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t13-search-by-asset-type-document">T1.3: Search by Asset Type - Document<a class="headerlink" href="#t13-search-by-asset-type-document" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger: "Search for Document assets"</li>
+<li>Select: "Document" type</li>
+<li>Keyword: "Employee"</li>
+<li><strong>Expected Result:</strong> Returns "Employee Onboarding Checklist" (Document)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t14-search-by-asset-type-video">T1.4: Search by Asset Type - Video<a class="headerlink" href="#t14-search-by-asset-type-video" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger: "Show me Video assets"</li>
+<li>Select: "Video" type</li>
+<li>Keyword: Leave blank</li>
+<li><strong>Expected Result:</strong> Returns "Product Features Overview" (Video)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t15-search-by-asset-type-spreadsheet">T1.5: Search by Asset Type - Spreadsheet<a class="headerlink" href="#t15-search-by-asset-type-spreadsheet" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger: "Search for Spreadsheet assets"</li>
+<li>Select: "Spreadsheet" type</li>
+<li>Keyword: Leave blank</li>
+<li><strong>Expected Result:</strong> Returns "Financial Reporting Template" (Spreadsheet)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t16-search-by-keyword-guidelines">T1.6: Search by Keyword - "Guidelines"<a class="headerlink" href="#t16-search-by-keyword-guidelines" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger: "Search for content"</li>
+<li>Type: Any</li>
+<li>Keyword: "Guidelines"</li>
+<li><strong>Expected Result:</strong> Returns "Brand Guidelines 2026" (Document)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t17-search-by-keyword-overview">T1.7: Search by Keyword - "Overview"<a class="headerlink" href="#t17-search-by-keyword-overview" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger: "Search assets by topic"</li>
+<li>Type: Any</li>
+<li>Keyword: "Overview"</li>
+<li><strong>Expected Result:</strong> Returns "Product Features Overview" (Video)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t18-search-returns-correct-columns">T1.8: Search Returns Correct Columns<a class="headerlink" href="#t18-search-returns-correct-columns" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Perform any search (T1.1-T1.7)</li>
+<li>Verify response includes: Name, Type, Description, URL</li>
+<li><strong>Expected Result:</strong> Each result shows [Name] ([Type]), Description: [desc], Source: [URL]</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t19-search-with-no-results">T1.9: Search with No Results<a class="headerlink" href="#t19-search-with-no-results" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Type: "Search for digital assets"</li>
+<li>Type: "Presentation"</li>
+<li>Keyword: "NONEXISTENT_ASSET_XYZ"</li>
+<li><strong>Expected Result:</strong> "No assets found matching that criteria. Try a different keyword or asset type."</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t110-search-results-limited-to-top-10">T1.10: Search Results Limited to Top 10<a class="headerlink" href="#t110-search-results-limited-to-top-10" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Perform search that returns multiple results</li>
+<li>Count results in response</li>
+<li><strong>Expected Result:</strong> Returns maximum 10 results (or fewer if fewer exist)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t111-search-offers-log-reuse-option">T1.11: Search Offers Log Reuse Option<a class="headerlink" href="#t111-search-offers-log-reuse-option" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Perform search and get results</li>
+<li>Check if agent asks: "Would you like to log that you used any of these assets?"</li>
+<li>Answer "YES"</li>
+<li><strong>Expected Result:</strong> Transitions to Topic 2 (Log Reuse)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t112-search-allows-no-to-reuse-logging">T1.12: Search Allows "No" to Reuse Logging<a class="headerlink" href="#t112-search-allows-no-to-reuse-logging" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Perform search</li>
+<li>Agent asks about logging reuse</li>
+<li>Answer "NO"</li>
+<li><strong>Expected Result:</strong> Conversation ends gracefully, offers to search again</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h2 id="test-suite-2-topic-2-log-content-reuse-15-tests">TEST SUITE 2: TOPIC 2 - LOG CONTENT REUSE (15 Tests)<a class="headerlink" href="#test-suite-2-topic-2-log-content-reuse-15-tests" title="Permanent link">&para;</a></h2>
+<h3 id="t21-log-reuse-q1-2026-sales-strategy">T2.1: Log Reuse - Q1 2026 Sales Strategy<a class="headerlink" href="#t21-log-reuse-q1-2026-sales-strategy" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger: "I used an asset"</li>
+<li>Asset: "Q1 2026 Sales Strategy"</li>
+<li>Context: "Regional sales meeting"</li>
+<li>Hours: 2</li>
+<li>Value: 500</li>
+<li><strong>Expected Result:</strong> Confirms "Logged reuse of Q1 2026 Sales Strategy. Value captured: $500, 2 hours saved."</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t22-log-reuse-employee-onboarding-checklist">T2.2: Log Reuse - Employee Onboarding Checklist<a class="headerlink" href="#t22-log-reuse-employee-onboarding-checklist" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger: "Log reuse"</li>
+<li>Asset: "Employee Onboarding Checklist"</li>
+<li>Context: "New employee onboarding"</li>
+<li>Hours: 1</li>
+<li>Value: 250</li>
+<li><strong>Expected Result:</strong> Confirms reuse logged successfully</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t23-verify-dataverse-record-created-table">T2.3: Verify Dataverse Record Created - Table<a class="headerlink" href="#t23-verify-dataverse-record-created-table" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Log a reuse (per T2.1 or T2.2)</li>
+<li>Go to Power Apps &gt; Tables &gt; cr846_contentsreuselog</li>
+<li>Check for new record</li>
+<li><strong>Expected Result:</strong> New record exists with today's date</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t24-verify-dataverse-record-asset-lookup">T2.4: Verify Dataverse Record - Asset Lookup<a class="headerlink" href="#t24-verify-dataverse-record-asset-lookup" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Open new reuse log record (from T2.3)</li>
+<li>Check cr846_digitalassetid column</li>
+<li><strong>Expected Result:</strong> Contains correct asset ID (lookup to Digital Asset table works)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t25-verify-dataverse-record-username">T2.5: Verify Dataverse Record - Username<a class="headerlink" href="#t25-verify-dataverse-record-username" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Open new reuse log record</li>
+<li>Check cr846_username column</li>
+<li><strong>Expected Result:</strong> Contains current user's email address</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t26-verify-dataverse-record-context">T2.6: Verify Dataverse Record - Context<a class="headerlink" href="#t26-verify-dataverse-record-context" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Open new reuse log record</li>
+<li>Check cr846_context column</li>
+<li><strong>Expected Result:</strong> Contains exact context entered by user</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t27-verify-dataverse-record-date">T2.7: Verify Dataverse Record - Date<a class="headerlink" href="#t27-verify-dataverse-record-date" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Open new reuse log record</li>
+<li>Check cr846_reusedate column</li>
+<li><strong>Expected Result:</strong> Contains today's date</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t28-verify-dataverse-record-hours">T2.8: Verify Dataverse Record - Hours<a class="headerlink" href="#t28-verify-dataverse-record-hours" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Open new reuse log record</li>
+<li>Check cr846_savinghours column</li>
+<li><strong>Expected Result:</strong> Contains hours value entered (as number)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t29-verify-dataverse-record-amount">T2.9: Verify Dataverse Record - Amount<a class="headerlink" href="#t29-verify-dataverse-record-amount" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Open new reuse log record</li>
+<li>Check cr846_savingamount column</li>
+<li><strong>Expected Result:</strong> Contains dollar value entered (as currency)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t210-log-reuse-asset-not-found">T2.10: Log Reuse - Asset Not Found<a class="headerlink" href="#t210-log-reuse-asset-not-found" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger: "Log reuse"</li>
+<li>Asset: "NONEXISTENT_ASSET"</li>
+<li>Try to proceed</li>
+<li><strong>Expected Result:</strong> "Asset not found. Please provide the exact asset name."</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t211-log-reuse-zero-hours-input">T2.11: Log Reuse - Zero Hours Input<a class="headerlink" href="#t211-log-reuse-zero-hours-input" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Log reuse with Hours: 0</li>
+<li>Value: 0</li>
+<li><strong>Expected Result:</strong> Accepts entry and logs record</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t212-log-reuse-large-numbers">T2.12: Log Reuse - Large Numbers<a class="headerlink" href="#t212-log-reuse-large-numbers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Log reuse with Hours: 100</li>
+<li>Value: 50000</li>
+<li><strong>Expected Result:</strong> Accepts and logs without errors</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t213-log-reuse-special-characters-in-context">T2.13: Log Reuse - Special Characters in Context<a class="headerlink" href="#t213-log-reuse-special-characters-in-context" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Log reuse with Context: "Client meeting @ XYZ Corp (Q1 2026)"</li>
+<li><strong>Expected Result:</strong> Accepts and stores exact string</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t214-log-reuse-multiple-records-same-asset">T2.14: Log Reuse - Multiple Records Same Asset<a class="headerlink" href="#t214-log-reuse-multiple-records-same-asset" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Log reuse of "Q1 2026 Sales Strategy" (first time)</li>
+<li>Repeat logging same asset with different context/values (second time)</li>
+<li><strong>Expected Result:</strong> Both records created (cr846_reusecount not auto-incremented by agent)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t215-log-reuse-navigate-to-statistics">T2.15: Log Reuse - Navigate to Statistics<a class="headerlink" href="#t215-log-reuse-navigate-to-statistics" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Complete logging reuse</li>
+<li>Agent asks: "Would you like to... or log another reuse?"</li>
+<li>Choose: "View statistics"</li>
+<li><strong>Expected Result:</strong> Transitions to Topic 3 (View Statistics)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h2 id="test-suite-3-topic-3-view-reuse-statistics-10-tests">TEST SUITE 3: TOPIC 3 - VIEW REUSE STATISTICS (10 Tests)<a class="headerlink" href="#test-suite-3-topic-3-view-reuse-statistics-10-tests" title="Permanent link">&para;</a></h2>
+<h3 id="t31-view-statistics-q1-2026-sales-strategy">T3.1: View Statistics - Q1 2026 Sales Strategy<a class="headerlink" href="#t31-view-statistics-q1-2026-sales-strategy" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger: "Show reuse statistics"</li>
+<li>Asset: "Q1 2026 Sales Strategy"</li>
+<li><strong>Expected Result:</strong> Shows: Total Uses: 2, Total Hours Saved: 6, Total Value: $1500, Last Used: [date]</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t32-view-statistics-single-use-asset">T3.2: View Statistics - Single Use Asset<a class="headerlink" href="#t32-view-statistics-single-use-asset" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger: "Asset impact report"</li>
+<li>Asset: "Employee Onboarding Checklist"</li>
+<li><strong>Expected Result:</strong> Shows: Total Uses: 1, Total Hours Saved: 1, Total Value: $250</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t33-view-statistics-asset-not-found">T3.3: View Statistics - Asset Not Found<a class="headerlink" href="#t33-view-statistics-asset-not-found" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger: "View statistics"</li>
+<li>Asset: "NONEXISTENT_ASSET"</li>
+<li><strong>Expected Result:</strong> "No statistics found for that asset. Try searching for assets first."</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t34-view-statistics-verify-count-calculation">T3.4: View Statistics - Verify Count Calculation<a class="headerlink" href="#t34-view-statistics-verify-count-calculation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Check: How many times was asset logged in T2?</li>
+<li>Run statistics query</li>
+<li>Compare count</li>
+<li><strong>Expected Result:</strong> Count matches number of reuse log records for that asset</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t35-view-statistics-verify-hours-sum">T3.5: View Statistics - Verify Hours Sum<a class="headerlink" href="#t35-view-statistics-verify-hours-sum" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Manually add hours from all reuse logs for asset</li>
+<li>Run statistics query</li>
+<li>Compare total</li>
+<li><strong>Expected Result:</strong> Total Hours matches sum of cr846_savinghours</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t36-view-statistics-verify-value-sum">T3.6: View Statistics - Verify Value Sum<a class="headerlink" href="#t36-view-statistics-verify-value-sum" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Manually add amounts from all reuse logs for asset</li>
+<li>Run statistics query</li>
+<li>Compare total</li>
+<li><strong>Expected Result:</strong> Total Value matches sum of cr846_savingamount</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t37-view-statistics-last-used-date">T3.7: View Statistics - Last Used Date<a class="headerlink" href="#t37-view-statistics-last-used-date" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Log reuse of asset on [date 1]</li>
+<li>Log reuse again on [date 2] (later)</li>
+<li>Run statistics</li>
+<li><strong>Expected Result:</strong> "Last Used" shows [date 2] (most recent)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t38-view-statistics-response-formatting">T3.8: View Statistics - Response Formatting<a class="headerlink" href="#t38-view-statistics-response-formatting" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger statistics query</li>
+<li>Check response format</li>
+<li><strong>Expected Result:</strong> Formatted as: "Statistics for [Asset Name]:" with separated metrics</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t39-view-statistics-currency-formatting">T3.9: View Statistics - Currency Formatting<a class="headerlink" href="#t39-view-statistics-currency-formatting" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>View statistics for asset with value of 1500</li>
+<li><strong>Expected Result:</strong> Displays as "$1500" (currency format)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t310-view-statistics-search-again-option">T3.10: View Statistics - Search Again Option<a class="headerlink" href="#t310-view-statistics-search-again-option" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>View statistics</li>
+<li>Agent offers options</li>
+<li>Choose: "Search for another asset"</li>
+<li><strong>Expected Result:</strong> Returns to Topic 1 (Search)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h2 id="test-suite-4-conversation-flow-7-tests">TEST SUITE 4: CONVERSATION FLOW (7 Tests)<a class="headerlink" href="#test-suite-4-conversation-flow-7-tests" title="Permanent link">&para;</a></h2>
+<h3 id="t41-agent-greeting">T4.1: Agent Greeting<a class="headerlink" href="#t41-agent-greeting" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Open agent</li>
+<li>Wait for initial message</li>
+<li><strong>Expected Result:</strong> "Hello! I'm the SimShip Digital Asset Finder. I help you discover digital assets and track how we're reusing them. What would you like to do? (Search for assets / Log asset reuse / View statistics)"</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t42-off-topic-question">T4.2: Off-Topic Question<a class="headerlink" href="#t42-off-topic-question" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger agent</li>
+<li>Ask: "What's the weather today?"</li>
+<li><strong>Expected Result:</strong> "I'm specialized in helping with digital asset discovery and usage tracking. Would you like to search for assets, log reuse, or view statistics?"</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t43-navigate-search-to-reuse">T4.3: Navigate Search to Reuse<a class="headerlink" href="#t43-navigate-search-to-reuse" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Search for assets (Topic 1)</li>
+<li>Answer "YES" to log reuse</li>
+<li><strong>Expected Result:</strong> Seamlessly transitions to Topic 2 (Log Reuse)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t44-navigate-reuse-to-statistics">T4.4: Navigate Reuse to Statistics<a class="headerlink" href="#t44-navigate-reuse-to-statistics" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Log reuse (Topic 2)</li>
+<li>Answer to view statistics</li>
+<li><strong>Expected Result:</strong> Seamlessly transitions to Topic 3 (View Statistics)</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t45-cancel-mid-topic">T4.5: Cancel Mid-Topic<a class="headerlink" href="#t45-cancel-mid-topic" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Start searching for assets</li>
+<li>Type: "Cancel" or "Never mind"</li>
+<li><strong>Expected Result:</strong> "No problem. Type something to get started again."</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t46-exit-conversation">T4.6: Exit Conversation<a class="headerlink" href="#t46-exit-conversation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Complete a full flow (Search &gt; Reuse &gt; Statistics)</li>
+<li>End conversation</li>
+<li><strong>Expected Result:</strong> "Thank you for using SimShip Digital Asset Finder. Your asset usage has been recorded and will help optimize our content strategy."</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t47-error-recovery">T4.7: Error Recovery<a class="headerlink" href="#t47-error-recovery" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Trigger error (search with bad input, asset not found, etc.)</li>
+<li>Receive error message</li>
+<li>Try again with correct input</li>
+<li><strong>Expected Result:</strong> Agent recovers and processes new request correctly</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h2 id="test-suite-5-dataverse-integration-3-tests">TEST SUITE 5: DATAVERSE INTEGRATION (3 Tests)<a class="headerlink" href="#test-suite-5-dataverse-integration-3-tests" title="Permanent link">&para;</a></h2>
+<h3 id="t51-connection-health-check">T5.1: Connection Health Check<a class="headerlink" href="#t51-connection-health-check" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Open Copilot Studio</li>
+<li>Go to Settings &gt; Connectors</li>
+<li>Check "SimShip-Dataverse" connection status</li>
+<li><strong>Expected Result:</strong> Status shows "Connected" or "Healthy"</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t52-query-performance">T5.2: Query Performance<a class="headerlink" href="#t52-query-performance" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Search for assets (returns 10 results)</li>
+<li>Check response time</li>
+<li><strong>Expected Result:</strong> Results return in less than 5 seconds</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h3 id="t53-data-integrity-reuse-log-to-digital-asset-relationship">T5.3: Data Integrity - Reuse Log to Digital Asset Relationship<a class="headerlink" href="#t53-data-integrity-reuse-log-to-digital-asset-relationship" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Steps:</strong></li>
+<li>Log reuse of "Q1 2026 Sales Strategy"</li>
+<li>Go to Power Apps &gt; cr846_contentsreuselog</li>
+<li>Open new record</li>
+<li>Click on cr846_digitalassetid (lookup field)</li>
+<li><strong>Expected Result:</strong> Lookup correctly resolves to "Q1 2026 Sales Strategy" in Digital Asset table</li>
+<li><strong>Status:</strong> ☐ Pass | ☐ Fail | ☐ N/A</li>
+<li><strong>Notes:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_____</li>
+</ul>
+<hr />
+<h2 id="summary">SUMMARY<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Test Suite</th>
+<th>Total</th>
+<th>Passed</th>
+<th>Failed</th>
+<th>N/A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1: Search Digital Assets</td>
+<td>12</td>
+<td>___</td>
+<td>___</td>
+<td>___</td>
+</tr>
+<tr>
+<td>T2: Log Content Reuse</td>
+<td>15</td>
+<td>___</td>
+<td>___</td>
+<td>___</td>
+</tr>
+<tr>
+<td>T3: View Statistics</td>
+<td>10</td>
+<td>___</td>
+<td>___</td>
+<td>___</td>
+</tr>
+<tr>
+<td>T4: Conversation Flow</td>
+<td>7</td>
+<td>___</td>
+<td>___</td>
+<td>___</td>
+</tr>
+<tr>
+<td>T5: Dataverse Integration</td>
+<td>3</td>
+<td>___</td>
+<td>___</td>
+<td>___</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>47</strong></td>
+<td>___</td>
+<td>___</td>
+<td>___</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="overall-status">OVERALL STATUS<a class="headerlink" href="#overall-status" title="Permanent link">&para;</a></h2>
+<p><strong>Ready for Production:</strong> ☐ YES | ☐ NO</p>
+<p><strong>Blockers/Issues:</strong>
+<div class="highlight"><pre><span></span><code>[List any failed tests that must be fixed before deployment]
+</code></pre></div></p>
+<p><strong>Sign-Off:</strong></p>
+<p>Tester: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_ Date: </em></strong><strong><em>_</em></strong></p>
+<p>QA Lead: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em> Date: </em></strong><strong><em>_</em></strong></p>
+<p><strong>Notes for Future Testing:</strong>
+<div class="highlight"><pre><span></span><code>[Document any enhancements, edge cases, or additional tests needed]
+</code></pre></div></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 SimShip Team
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/yourusername/simship-agent-docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

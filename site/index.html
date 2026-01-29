@@ -1,0 +1,1002 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete documentation for SimShip Content Reuse Agent">
+      
+      
+        <meta name="author" content="SimShip Team">
+      
+      
+        <link rel="canonical" href="https://derricksobrien.github.io/simship-agent-docs/">
+      
+      
+      
+        <link rel="next" href="SIMSHIP_AGENT_V2_START_HERE/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>SimShip Agent v2 Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#simship-content-reuse-agent-v2-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="SimShip Agent v2 Documentation" class="md-header__button md-logo" aria-label="SimShip Agent v2 Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SimShip Agent v2 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="SimShip Agent v2 Documentation" class="md-nav__button md-logo" aria-label="SimShip Agent v2 Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SimShip Agent v2 Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Navigation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-to-simship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 New to SimShip?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Executive Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Technical Deep Dive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Build &amp; Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-simship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is SimShip?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is SimShip?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Developers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-project-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Project Managers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-stakeholders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Stakeholders
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lowest-common-unit-of-reuse-lcur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lowest Common Unit of Reuse (LCUR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-tier-deduplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three-Tier Deduplication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sourceposition-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SourcePosition Tracking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SIMSHIP_AGENT_V2_START_HERE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start Here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SIMSHIP_AGENT_V2_ANALYSIS_README/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis & Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SIMSHIP_AGENT_V2_STATUS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SIMSHIP_AGENT_V2_GAP_ANALYSIS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SIMSHIP_AGENT_V2_IMPLEMENTATION_CHECKLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementation Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SIMSHIP_AGENT_V2_FEATURE_MATRIX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feature Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SIMSHIP_AGENT_V2_DELIVERY_SUMMARY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PRIORITY_FEATURES_AND_TEST_CASES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Priority Features & Test Cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AGENT_TESTING_CHECKLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Testing Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="COPILOT_STUDIO_BUILD_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copilot Studio Build Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="simship-content-reuse-agent-v2-documentation">SimShip Content Reuse Agent v2 Documentation<a class="headerlink" href="#simship-content-reuse-agent-v2-documentation" title="Permanent link">&para;</a></h1>
+<p>Welcome to the comprehensive documentation for <strong>SimShip</strong> – a semantic search and content deduplication platform for discovering reusable learning content across SharePoint, Power Platform, and enterprise data sources.</p>
+<h2 id="quick-navigation">Quick Navigation<a class="headerlink" href="#quick-navigation" title="Permanent link">&para;</a></h2>
+<h3 id="new-to-simship">🚀 <strong>New to SimShip?</strong><a class="headerlink" href="#new-to-simship" title="Permanent link">&para;</a></h3>
+<p>Start here: <a href="SIMSHIP_AGENT_V2_START_HERE/"><strong>SIMSHIP_AGENT_V2_START_HERE.md</strong></a></p>
+<h3 id="executive-summary">📊 <strong>Executive Summary</strong><a class="headerlink" href="#executive-summary" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Status Report</strong>: <a href="SIMSHIP_AGENT_V2_STATUS/">SIMSHIP_AGENT_V2_STATUS.md</a> – For leadership and project stakeholders</li>
+<li><strong>Delivery Summary</strong>: <a href="SIMSHIP_AGENT_V2_DELIVERY_SUMMARY/">SIMSHIP_AGENT_V2_DELIVERY_SUMMARY.md</a> – What's been delivered</li>
+</ul>
+<h3 id="technical-deep-dive">🔍 <strong>Technical Deep Dive</strong><a class="headerlink" href="#technical-deep-dive" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Gap Analysis</strong>: <a href="SIMSHIP_AGENT_V2_GAP_ANALYSIS/">SIMSHIP_AGENT_V2_GAP_ANALYSIS.md</a> – What's missing and why</li>
+<li><strong>Analysis &amp; Overview</strong>: <a href="SIMSHIP_AGENT_V2_ANALYSIS_README/">SIMSHIP_AGENT_V2_ANALYSIS_README.md</a> – Technical context</li>
+</ul>
+<h3 id="build-execution">✅ <strong>Build &amp; Execution</strong><a class="headerlink" href="#build-execution" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Implementation Checklist</strong>: <a href="SIMSHIP_AGENT_V2_IMPLEMENTATION_CHECKLIST/">SIMSHIP_AGENT_V2_IMPLEMENTATION_CHECKLIST.md</a> – Day-by-day build plan</li>
+<li><strong>Feature Matrix</strong>: <a href="SIMSHIP_AGENT_V2_FEATURE_MATRIX/">SIMSHIP_AGENT_V2_FEATURE_MATRIX.md</a> – Progress tracking</li>
+</ul>
+<hr />
+<h2 id="what-is-simship">What is SimShip?<a class="headerlink" href="#what-is-simship" title="Permanent link">&para;</a></h2>
+<p>A <strong>semantic search and content deduplication platform</strong> that:</p>
+<ul>
+<li>✅ Extracts learning content from multiple sources (Excel, Dataverse, Power Platform)</li>
+<li>✅ Deduplicates using hash, embedding, and metadata analysis</li>
+<li>✅ Enables fast semantic search with precise citations</li>
+<li>✅ Tracks content reuse and savings across enterprises</li>
+<li>✅ Powers a Copilot Studio agent for discovery and logging</li>
+</ul>
+<h3 id="core-architecture">Core Architecture<a class="headerlink" href="#core-architecture" title="Permanent link">&para;</a></h3>
+<p><strong>Extract → Deduplicate → Embed → Store → Search</strong></p>
+<hr />
+<h2 id="documentation-structure">Documentation Structure<a class="headerlink" href="#documentation-structure" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Purpose</th>
+<th>Audience</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="SIMSHIP_AGENT_V2_START_HERE/">START_HERE</a></td>
+<td>Orientation guide</td>
+<td>Everyone</td>
+</tr>
+<tr>
+<td><a href="SIMSHIP_AGENT_V2_STATUS/">STATUS</a></td>
+<td>Executive summary</td>
+<td>Leadership, Stakeholders</td>
+</tr>
+<tr>
+<td><a href="SIMSHIP_AGENT_V2_ANALYSIS_README/">ANALYSIS</a></td>
+<td>Technical overview</td>
+<td>Developers</td>
+</tr>
+<tr>
+<td><a href="SIMSHIP_AGENT_V2_GAP_ANALYSIS/">GAP_ANALYSIS</a></td>
+<td>Detailed gaps &amp; solutions</td>
+<td>Technical leads</td>
+</tr>
+<tr>
+<td><a href="SIMSHIP_AGENT_V2_IMPLEMENTATION_CHECKLIST/">CHECKLIST</a></td>
+<td>Daily build tasks</td>
+<td>Development team</td>
+</tr>
+<tr>
+<td><a href="SIMSHIP_AGENT_V2_FEATURE_MATRIX/">FEATURE_MATRIX</a></td>
+<td>Progress metrics</td>
+<td>Project managers</td>
+</tr>
+<tr>
+<td><a href="SIMSHIP_AGENT_V2_DELIVERY_SUMMARY/">DELIVERY</a></td>
+<td>What's been built</td>
+<td>Stakeholders</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<h3 id="for-developers">For Developers<a class="headerlink" href="#for-developers" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Read <a href="SIMSHIP_AGENT_V2_ANALYSIS_README/">SIMSHIP_AGENT_V2_ANALYSIS_README.md</a></li>
+<li>Review <a href="SIMSHIP_AGENT_V2_GAP_ANALYSIS/">SIMSHIP_AGENT_V2_GAP_ANALYSIS.md</a></li>
+<li>Follow <a href="SIMSHIP_AGENT_V2_IMPLEMENTATION_CHECKLIST/">SIMSHIP_AGENT_V2_IMPLEMENTATION_CHECKLIST.md</a></li>
+</ol>
+<h3 id="for-project-managers">For Project Managers<a class="headerlink" href="#for-project-managers" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Start with <a href="SIMSHIP_AGENT_V2_STATUS/">SIMSHIP_AGENT_V2_STATUS.md</a></li>
+<li>Track progress using <a href="SIMSHIP_AGENT_V2_FEATURE_MATRIX/">SIMSHIP_AGENT_V2_FEATURE_MATRIX.md</a></li>
+<li>Review <a href="SIMSHIP_AGENT_V2_DELIVERY_SUMMARY/">SIMSHIP_AGENT_V2_DELIVERY_SUMMARY.md</a></li>
+</ol>
+<h3 id="for-stakeholders">For Stakeholders<a class="headerlink" href="#for-stakeholders" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Review <a href="SIMSHIP_AGENT_V2_STATUS/">SIMSHIP_AGENT_V2_STATUS.md</a></li>
+<li>Check <a href="SIMSHIP_AGENT_V2_DELIVERY_SUMMARY/">SIMSHIP_AGENT_V2_DELIVERY_SUMMARY.md</a></li>
+</ol>
+<hr />
+<h2 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h2>
+<h3 id="lowest-common-unit-of-reuse-lcur">Lowest Common Unit of Reuse (LCUR)<a class="headerlink" href="#lowest-common-unit-of-reuse-lcur" title="Permanent link">&para;</a></h3>
+<p>The smallest independently reusable content chunk:
+- Learning modules, slides, assessment questions
+- Code examples, use cases, video segments
+- Graphics and reference materials</p>
+<p>Each LCUR tracks: owner, access level, complexity, learning objectives, and creation date.</p>
+<h3 id="three-tier-deduplication">Three-Tier Deduplication<a class="headerlink" href="#three-tier-deduplication" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Hash-based</strong>: Exact text matches</li>
+<li><strong>Embedding-based</strong>: Semantic similarity (cosine distance)</li>
+<li><strong>Metadata-based</strong>: Unit type + target audience + learning objectives</li>
+</ol>
+<h3 id="sourceposition-tracking">SourcePosition Tracking<a class="headerlink" href="#sourceposition-tracking" title="Permanent link">&para;</a></h3>
+<p>Pinpoint exact content location:
+- <strong>Excel</strong>: Sheet name, row, column
+- <strong>Dataverse</strong>: Entity name, record ID, field name
+- <strong>Documents</strong>: Line start/end</p>
+<hr />
+<h2 id="project-status">Project Status<a class="headerlink" href="#project-status" title="Permanent link">&para;</a></h2>
+<p><strong>Phase 3 (Configuration)</strong> – Setting up Dataverse tables and sample data</p>
+<p>✅ Complete:
+- Architecture designed
+- Python agents built (local + Azure versions)
+- Power Platform solution scaffolded
+- 900+ pages of documentation</p>
+<p>🟡 In Progress:
+- Copilot Studio agent configuration
+- Table creation and data import
+- Testing and validation</p>
+<hr />
+<h2 id="questions">Questions?<a class="headerlink" href="#questions" title="Permanent link">&para;</a></h2>
+<p>Refer to the specific document for your role (see table above), or start with <a href="SIMSHIP_AGENT_V2_START_HERE/">SIMSHIP_AGENT_V2_START_HERE.md</a>.</p>
+<hr />
+<p><em>Last Updated: January 27, 2026</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 SimShip Team
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/yourusername/simship-agent-docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "toc.integrate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

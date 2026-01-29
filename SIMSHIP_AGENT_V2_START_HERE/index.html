@@ -1,0 +1,1320 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete documentation for SimShip Content Reuse Agent">
+      
+      
+        <meta name="author" content="SimShip Team">
+      
+      
+        <link rel="canonical" href="https://derricksobrien.github.io/simship-agent-docs/SIMSHIP_AGENT_V2_START_HERE/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../SIMSHIP_AGENT_V2_ANALYSIS_README/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Start Here - SimShip Agent v2 Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#simship-agent-v2-complete-analysis-package" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SimShip Agent v2 Documentation" class="md-header__button md-logo" aria-label="SimShip Agent v2 Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SimShip Agent v2 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Start Here
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SimShip Agent v2 Documentation" class="md-nav__button md-logo" aria-label="SimShip Agent v2 Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SimShip Agent v2 Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start Here
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start Here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation-guide-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation Guide &amp; Quick Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-5-documents-in-recommended-reading-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📑 THE 5 DOCUMENTS (In Recommended Reading Order)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📑 THE 5 DOCUMENTS (In Recommended Reading Order)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-start-here-simship_agent_v2_analysis_readmemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. START HERE → SIMSHIP_AGENT_V2_ANALYSIS_README.md
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-for-simon-simship_agent_v2_statusmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. FOR SIMON → SIMSHIP_AGENT_V2_STATUS.md
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-for-technical-details-simship_agent_v2_gap_analysismd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. FOR TECHNICAL DETAILS → SIMSHIP_AGENT_V2_GAP_ANALYSIS.md
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-for-execution-simship_agent_v2_implementation_checklistmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. FOR EXECUTION → SIMSHIP_AGENT_V2_IMPLEMENTATION_CHECKLIST.md
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-for-metrics-simship_agent_v2_feature_matrixmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. FOR METRICS → SIMSHIP_AGENT_V2_FEATURE_MATRIX.md
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 QUICK REFERENCE MATRIX
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 QUICK REFERENCE MATRIX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-document-do-i-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which Document Do I Need?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-investment-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ TIME INVESTMENT GUIDE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-state-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 CURRENT STATE SUMMARY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-roadmap-3-weeks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 YOUR ROADMAP (3 WEEKS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 KEY INSIGHTS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 KEY INSIGHTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-missing-pieces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Missing Pieces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters-to-simon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why It Matters to Simon
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ BEFORE YOU START
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-checklists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 DOCUMENT CHECKLISTS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 DOCUMENT CHECKLISTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#things-to-do-right-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Things to Do Right Now
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#things-to-do-this-week" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Things to Do This Week
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#things-to-do-weekly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Things to Do Weekly
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 SUCCESS CRITERIA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📱 QUICK LINKS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-tell-people" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💬 WHAT TO TELL PEOPLE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#critical-path-what-must-happen-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 CRITICAL PATH (What Must Happen First)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-you-get-stuck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📞 WHEN YOU GET STUCK
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-resources-from-your-existing-docs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎓 LEARNING RESOURCES (From Your Existing Docs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-scene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 NEXT SCENE
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_ANALYSIS_README/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis & Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_STATUS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_GAP_ANALYSIS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_IMPLEMENTATION_CHECKLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementation Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_FEATURE_MATRIX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feature Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_DELIVERY_SUMMARY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PRIORITY_FEATURES_AND_TEST_CASES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Priority Features & Test Cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AGENT_TESTING_CHECKLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Testing Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COPILOT_STUDIO_BUILD_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copilot Studio Build Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="simship-agent-v2-complete-analysis-package">SimShip Agent v2 - Complete Analysis Package<a class="headerlink" href="#simship-agent-v2-complete-analysis-package" title="Permanent link">&para;</a></h1>
+<h2 id="navigation-guide-quick-reference">Navigation Guide &amp; Quick Reference<a class="headerlink" href="#navigation-guide-quick-reference" title="Permanent link">&para;</a></h2>
+<p><strong>Created:</strong> January 26, 2026<br />
+<strong>Agent Status:</strong> Provisioned but incomplete (13% done)<br />
+<strong>Documents:</strong> 5 comprehensive guides  </p>
+<hr />
+<h2 id="the-5-documents-in-recommended-reading-order">📑 THE 5 DOCUMENTS (In Recommended Reading Order)<a class="headerlink" href="#the-5-documents-in-recommended-reading-order" title="Permanent link">&para;</a></h2>
+<h3 id="1-start-here-simship_agent_v2_analysis_readmemd">1. <strong>START HERE</strong> → SIMSHIP_AGENT_V2_ANALYSIS_README.md<a class="headerlink" href="#1-start-here-simship_agent_v2_analysis_readmemd" title="Permanent link">&para;</a></h3>
+<p><strong>Length:</strong> 5 minutes<br />
+<strong>Audience:</strong> Everyone<br />
+<strong>Purpose:</strong> Overview of all documents + recommendations</p>
+<p><strong>Read this if you:</strong>
+- Want a birds-eye view of the analysis
+- Need to understand what each document does
+- Want to know what to do next</p>
+<hr />
+<h3 id="2-for-simon-simship_agent_v2_statusmd">2. <strong>FOR SIMON</strong> → SIMSHIP_AGENT_V2_STATUS.md<a class="headerlink" href="#2-for-simon-simship_agent_v2_statusmd" title="Permanent link">&para;</a></h3>
+<p><strong>Length:</strong> 10 minutes<br />
+<strong>Audience:</strong> Simon (executive sponsor), your team<br />
+<strong>Purpose:</strong> Visual summary of what works and what's missing</p>
+<p><strong>Read this if you:</strong>
+- Need to brief Simon on progress
+- Want to show status visually
+- Need to ask him 5 key questions
+- Want to present the 3-week plan</p>
+<p><strong>Key takeaway:</strong> 
+<div class="highlight"><pre><span></span><code>&quot;We have 30% of D1, 0% of D2 and D3. 
+Need 3 weeks to complete all 3. 
+Will show $23K ROI in first month.&quot;
+</code></pre></div></p>
+<hr />
+<h3 id="3-for-technical-details-simship_agent_v2_gap_analysismd">3. <strong>FOR TECHNICAL DETAILS</strong> → SIMSHIP_AGENT_V2_GAP_ANALYSIS.md<a class="headerlink" href="#3-for-technical-details-simship_agent_v2_gap_analysismd" title="Permanent link">&para;</a></h3>
+<p><strong>Length:</strong> 30 minutes<br />
+<strong>Audience:</strong> Developers, architects, technical leads<br />
+<strong>Purpose:</strong> Deep analysis of every missing feature</p>
+<p><strong>Read this if you:</strong>
+- Need to understand technical gaps
+- Want to plan your implementation
+- Need specific field names for Dataverse
+- Need Copilot Studio design details
+- Want Power Automate flow specifications</p>
+<p><strong>Sections:</strong>
+- Current state of each deliverable
+- Required Dataverse fields with examples
+- Specific Copilot topics to build
+- Power Automate flows needed
+- Test cases (28 total)
+- Implementation priorities</p>
+<hr />
+<h3 id="4-for-execution-simship_agent_v2_implementation_checklistmd">4. <strong>FOR EXECUTION</strong> → SIMSHIP_AGENT_V2_IMPLEMENTATION_CHECKLIST.md<a class="headerlink" href="#4-for-execution-simship_agent_v2_implementation_checklistmd" title="Permanent link">&para;</a></h3>
+<p><strong>Length:</strong> Referenced daily (20-30 minutes/day)<br />
+<strong>Audience:</strong> You (the builder)<br />
+<strong>Purpose:</strong> Day-by-day checklist you can execute</p>
+<p><strong>Read this if you:</strong>
+- Ready to start building
+- Need daily task list
+- Want to track progress
+- Need to manage your week
+- Want to know exactly what to do each day</p>
+<p><strong>Structure:</strong>
+- Week 1: Fix Deliverable 1 (Discovery)
+- Week 2: Build Deliverable 2 (Reuse Capture)
+- Week 3: Build Deliverable 3 (Reporting)
+- Test week: Full E2E validation</p>
+<p><strong>Bookmark this</strong> - You'll reference it daily.</p>
+<hr />
+<h3 id="5-for-metrics-simship_agent_v2_feature_matrixmd">5. <strong>FOR METRICS</strong> → SIMSHIP_AGENT_V2_FEATURE_MATRIX.md<a class="headerlink" href="#5-for-metrics-simship_agent_v2_feature_matrixmd" title="Permanent link">&para;</a></h3>
+<p><strong>Length:</strong> 15 minutes<br />
+<strong>Audience:</strong> QA, project managers, stakeholders<br />
+<strong>Purpose:</strong> Feature completion matrix and tracking</p>
+<p><strong>Read this if you:</strong>
+- Want to track completion percentages
+- Need to understand feature dependencies
+- Want to know which features to prioritize
+- Need to report progress (% complete)
+- Want to validate that nothing is missed</p>
+<p><strong>Key metrics:</strong>
+- Total features: 76
+- Currently done: 10 (13%)
+- D1 completion: 33%
+- D2 completion: 0%
+- D3 completion: 0%</p>
+<p><strong>Update this</strong> after each week to show progress.</p>
+<hr />
+<h2 id="quick-reference-matrix">🎯 QUICK REFERENCE MATRIX<a class="headerlink" href="#quick-reference-matrix" title="Permanent link">&para;</a></h2>
+<h3 id="which-document-do-i-need">Which Document Do I Need?<a class="headerlink" href="#which-document-do-i-need" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Document</th>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What's the status of the agent?</td>
+<td>STATUS.md</td>
+<td>Executive Summary</td>
+</tr>
+<tr>
+<td>What's missing?</td>
+<td>GAP_ANALYSIS.md</td>
+<td>Overview or specific deliverable</td>
+</tr>
+<tr>
+<td>What do I build next?</td>
+<td>CHECKLIST.md</td>
+<td>This week's plan</td>
+</tr>
+<tr>
+<td>How do I track progress?</td>
+<td>FEATURE_MATRIX.md</td>
+<td>Feature checklist</td>
+</tr>
+<tr>
+<td>What technical details do I need?</td>
+<td>GAP_ANALYSIS.md</td>
+<td>Components or integration points</td>
+</tr>
+<tr>
+<td>How do I talk to Simon about this?</td>
+<td>STATUS.md</td>
+<td>Key decision points section</td>
+</tr>
+<tr>
+<td>What are the test cases?</td>
+<td>GAP_ANALYSIS.md or CHECKLIST.md</td>
+<td>Testing section</td>
+</tr>
+<tr>
+<td>What Power Automate flows do I need?</td>
+<td>GAP_ANALYSIS.md</td>
+<td>Integration points section</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="time-investment-guide">⏱️ TIME INVESTMENT GUIDE<a class="headerlink" href="#time-investment-guide" title="Permanent link">&para;</a></h2>
+<p><strong>If you have 5 minutes:</strong>
+→ Read: ANALYSIS_README.md (this file)</p>
+<p><strong>If you have 10 minutes:</strong>
+→ Read: STATUS.md → Understand current state + what's missing</p>
+<p><strong>If you have 30 minutes:</strong>
+→ Read: STATUS.md + FEATURE_MATRIX.md → Understand scope</p>
+<p><strong>If you're starting to build:</strong>
+→ Read: GAP_ANALYSIS.md (full technical details)
+→ Print/bookmark: CHECKLIST.md (use daily)
+→ Keep open: FEATURE_MATRIX.md (track progress)</p>
+<p><strong>If you're in a meeting with Simon:</strong>
+→ Open: STATUS.md → Use visuals to explain</p>
+<p><strong>If you're debugging something:</strong>
+→ Search: GAP_ANALYSIS.md for component name</p>
+<hr />
+<h2 id="current-state-summary">📊 CURRENT STATE SUMMARY<a class="headerlink" href="#current-state-summary" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Agent: SimShip Digital Asset Finder
+Status: ✅ Provisioned, ⚠️ Partially Implemented
+
+Deliverable 1 (Surface Content):
+├─ Search works: ✅
+├─ Filters work: ❌
+├─ Rich display: ❌
+└─ Completion: 33%
+
+Deliverable 2 (Capture Reuse):
+├─ Conversation flow: ❌
+├─ Data logging: ❌
+├─ Cost calculation: ❌
+└─ Completion: 0%
+
+Deliverable 3 (Generate Reports):
+├─ Dashboard: ❌
+├─ Metrics: ❌
+├─ Trending: ❌
+└─ Completion: 0%
+
+Overall: 13% complete (10 of 76 features done)
+Ready for users: NO
+Estimated time to complete: 3 weeks (74 hours)
+</code></pre></div>
+<hr />
+<h2 id="your-roadmap-3-weeks">🚀 YOUR ROADMAP (3 WEEKS)<a class="headerlink" href="#your-roadmap-3-weeks" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>WEEK 1 (Jan 27-31):
+├─ Update Dataverse table schema
+├─ Add filters to Copilot search topic
+├─ Format results with rich cards
+└─ D1 Completion Target: 80%
+
+WEEK 2 (Feb 3-7):
+├─ Create Content Reuse Log table
+├─ Build Log Asset Reuse Power Automate flow
+├─ Create Copilot Log Reuse topic
+└─ D2 Completion Target: 100%
+
+WEEK 3 (Feb 10-14):
+├─ Build Power BI dashboard
+├─ Create Get Report Power Automate flow
+├─ Create Copilot View Report topic
+└─ D3 Completion Target: 100%
+
+TESTING (Feb 16-17):
+├─ Run 28 test cases
+├─ Get Simon&#39;s sign-off
+└─ Launch ready: ✅
+</code></pre></div>
+<hr />
+<h2 id="key-insights">💡 KEY INSIGHTS<a class="headerlink" href="#key-insights" title="Permanent link">&para;</a></h2>
+<h3 id="why-this-matters">Why This Matters<a class="headerlink" href="#why-this-matters" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Today:</strong> Agent works 30% → Users frustrated → Project loses momentum</li>
+<li><strong>After 3 weeks:</strong> Agent works 100% → Leadership sees ROI → Project becomes strategic</li>
+</ul>
+<h3 id="the-missing-pieces">The Missing Pieces<a class="headerlink" href="#the-missing-pieces" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Dataverse:</strong> 13 new columns + 1 new table</li>
+<li><strong>Copilot:</strong> 2 new topics + enhancements to existing</li>
+<li><strong>Flows:</strong> 2 new Power Automate flows</li>
+<li><strong>Dashboard:</strong> 1 Power BI or Power Apps dashboard</li>
+</ol>
+<h3 id="why-it-matters-to-simon">Why It Matters to Simon<a class="headerlink" href="#why-it-matters-to-simon" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Right now:  &quot;Agent finds content... but we can&#39;t prove ROI&quot;
+After 3 weeks: &quot;Agent found content + users reused it + we saved $23K&quot;
+               (Leadership: &quot;Where do I sign for more?&quot;)
+</code></pre></div>
+<hr />
+<h2 id="before-you-start">✅ BEFORE YOU START<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Read</strong> → All 5 documents (prioritize by time available)</li>
+<li><strong>Understand</strong> → The 3 deliverables and their dependencies</li>
+<li><strong>Schedule</strong> → Block your calendar for 3-week sprint</li>
+<li><strong>Communicate</strong> → Brief Simon on the plan</li>
+<li><strong>Execute</strong> → Follow the daily checklist</li>
+</ol>
+<hr />
+<h2 id="document-checklists">📋 DOCUMENT CHECKLISTS<a class="headerlink" href="#document-checklists" title="Permanent link">&para;</a></h2>
+<h3 id="things-to-do-right-now">Things to Do Right Now<a class="headerlink" href="#things-to-do-right-now" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Read this file (ANALYSIS_README.md)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Read STATUS.md</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Send STATUS.md to Simon</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Schedule 30-min call with Simon</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Get his approval on 5 key questions</li>
+</ul>
+<h3 id="things-to-do-this-week">Things to Do This Week<a class="headerlink" href="#things-to-do-this-week" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Read GAP_ANALYSIS.md fully</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Read IMPLEMENTATION_CHECKLIST.md</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Print/bookmark CHECKLIST.md for daily use</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Open FEATURE_MATRIX.md in a tab</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Start Week 1 tasks from CHECKLIST.md</li>
+</ul>
+<h3 id="things-to-do-weekly">Things to Do Weekly<a class="headerlink" href="#things-to-do-weekly" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Update FEATURE_MATRIX.md with progress</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Check off items in CHECKLIST.md</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Brief Simon on Friday progress</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Adjust next week's plan based on blockers</li>
+</ul>
+<hr />
+<h2 id="success-criteria">🎯 SUCCESS CRITERIA<a class="headerlink" href="#success-criteria" title="Permanent link">&para;</a></h2>
+<p>When you're done:
+- [ ] All 3 deliverables implemented
+- [ ] 28 test cases passing
+- [ ] Simon gives sign-off
+- [ ] Agent launches to users with confidence
+- [ ] Leadership sees ROI story</p>
+<hr />
+<h2 id="quick-links">📱 QUICK LINKS<a class="headerlink" href="#quick-links" title="Permanent link">&para;</a></h2>
+<p><strong>In your workspace:</strong>
+- <a href="../SIMSHIP_AGENT_V2_GAP_ANALYSIS/">GAP_ANALYSIS.md</a> - Technical details
+- <a href="../SIMSHIP_AGENT_V2_IMPLEMENTATION_CHECKLIST/">CHECKLIST.md</a> - Daily tasks
+- <a href="../SIMSHIP_AGENT_V2_STATUS/">STATUS.md</a> - Executive summary
+- <a href="../SIMSHIP_AGENT_V2_FEATURE_MATRIX/">FEATURE_MATRIX.md</a> - Progress tracking</p>
+<p><strong>From your existing docs:</strong>
+- <a href="../PRIORITY_FEATURES_AND_TEST_CASES/">PRIORITY_FEATURES_AND_TEST_CASES.md</a> - Design spec
+- <a href="../AGENT_TESTING_CHECKLIST/">AGENT_TESTING_CHECKLIST.md</a> - 28 test cases
+- <a href="../COPILOT_STUDIO_BUILD_GUIDE/">COPILOT_STUDIO_BUILD_GUIDE.md</a> - Build instructions</p>
+<hr />
+<h2 id="what-to-tell-people">💬 WHAT TO TELL PEOPLE<a class="headerlink" href="#what-to-tell-people" title="Permanent link">&para;</a></h2>
+<p><strong>To Simon:</strong>
+"The agent works for basic search, but we need 3 weeks to add filtering, reuse tracking, and ROI reporting. After that, we can prove the value and show leadership the savings."</p>
+<p><strong>To your team:</strong>
+"Here are 4 documents explaining what we need to build. D1 is partially done, D2 and D3 are missing. I'll be following the daily checklist in IMPLEMENTATION_CHECKLIST.md."</p>
+<p><strong>To QA:</strong>
+"Use AGENT_TESTING_CHECKLIST.md for test cases. Track our progress against FEATURE_MATRIX.md. We need all 28 tests passing by Feb 17."</p>
+<hr />
+<h2 id="critical-path-what-must-happen-first">🚨 CRITICAL PATH (What Must Happen First)<a class="headerlink" href="#critical-path-what-must-happen-first" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>┌──────────────────────────────────┐
+│ Update Dataverse table schema    │ ← MUST HAPPEN FIRST
+│ (Add columns + create new table) │
+└────────────┬─────────────────────┘
+             │
+    ┌────────▼──────────────────────┐
+    │ Build Power Automate flows    │ ← DEPENDS ON SCHEMA
+    │ (Create tables for flows)     │
+    └────────┬──────────────────────┘
+             │
+    ┌────────▼──────────────────────┐
+    │ Update Copilot topics         │ ← DEPENDS ON FLOWS
+    │ (Add new functionality)       │
+    └────────┬──────────────────────┘
+             │
+    ┌────────▼──────────────────────┐
+    │ Build reporting dashboard     │ ← DEPENDS ON TABLE
+    │ (Power BI/Power Apps)        │
+    └────────┬──────────────────────┘
+             │
+    ┌────────▼──────────────────────┐
+    │ Run full test suite           │ ← DEPENDS ON ALL ABOVE
+    │ (28 test cases)              │
+    └──────────────────────────────┘
+</code></pre></div>
+<p><strong>Bottom line:</strong> Start with Dataverse. Everything else depends on it.</p>
+<hr />
+<h2 id="when-you-get-stuck">📞 WHEN YOU GET STUCK<a class="headerlink" href="#when-you-get-stuck" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>For technical questions</strong> → Consult GAP_ANALYSIS.md (section by section)</li>
+<li><strong>For what to do next</strong> → Check CHECKLIST.md for your current week</li>
+<li><strong>For progress tracking</strong> → Update FEATURE_MATRIX.md</li>
+<li><strong>For explaining to Simon</strong> → Use STATUS.md</li>
+</ol>
+<hr />
+<h2 id="learning-resources-from-your-existing-docs">🎓 LEARNING RESOURCES (From Your Existing Docs)<a class="headerlink" href="#learning-resources-from-your-existing-docs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Design spec:</strong> PRIORITY_FEATURES_AND_TEST_CASES.md</li>
+<li><strong>Architecture:</strong> AGENT_ARCHITECTURE.md</li>
+<li><strong>Build guide:</strong> COPILOT_STUDIO_BUILD_GUIDE.md</li>
+<li><strong>Test cases:</strong> AGENT_TESTING_CHECKLIST.md</li>
+<li><strong>Data schema:</strong> ENTITY_COLUMNS_REFERENCE.md</li>
+</ul>
+<hr />
+<h2 id="next-scene">🎬 NEXT SCENE<a class="headerlink" href="#next-scene" title="Permanent link">&para;</a></h2>
+<p>You've got everything you need. Now it's time to build.</p>
+<p><strong>Starting tomorrow:</strong>
+1. Review the full analysis
+2. Talk to Simon
+3. Start Week 1 checklist
+4. Ship this properly</p>
+<hr />
+<p><strong>Ready? Let's do this! 🚀</strong></p>
+<p><em>Questions? Check the relevant document from the links above.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 SimShip Team
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/yourusername/simship-agent-docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1650 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete documentation for SimShip Content Reuse Agent">
+      
+      
+        <meta name="author" content="SimShip Team">
+      
+      
+        <link rel="canonical" href="https://derricksobrien.github.io/simship-agent-docs/PRIORITY_FEATURES_AND_TEST_CASES/">
+      
+      
+        <link rel="prev" href="../SIMSHIP_AGENT_V2_DELIVERY_SUMMARY/">
+      
+      
+        <link rel="next" href="../AGENT_TESTING_CHECKLIST/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Priority Features & Test Cases - SimShip Agent v2 Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#simship-agent-priority-features-test-cases" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SimShip Agent v2 Documentation" class="md-header__button md-logo" aria-label="SimShip Agent v2 Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SimShip Agent v2 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Priority Features & Test Cases
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SimShip Agent v2 Documentation" class="md-nav__button md-logo" aria-label="SimShip Agent v2 Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SimShip Agent v2 Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_START_HERE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start Here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_ANALYSIS_README/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis & Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_STATUS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_GAP_ANALYSIS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_IMPLEMENTATION_CHECKLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementation Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_FEATURE_MATRIX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feature Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SIMSHIP_AGENT_V2_DELIVERY_SUMMARY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delivery Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Priority Features & Test Cases
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Priority Features & Test Cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#based-on-meeting-notes-jan-13-16-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Based on Meeting Notes (Jan 13 &amp; 16, 2026)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executive Summary
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Executive Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simons-3-core-deliverables-priority-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simon's 3 Core Deliverables (PRIORITY ORDER)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#darins-technical-constraints-hard-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Darin's Technical Constraints (HARD BOUNDARIES)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-insight-from-meeting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Insight from Meeting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technology-stack-no-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technology Stack (NO AZURE)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technology Stack (NO AZURE)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technology Breakdown
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Stack
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simons-3-deliverables-detailed-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simon's 3 Deliverables - Detailed Breakdown
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simon&#39;s 3 Deliverables - Detailed Breakdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deliverable-1-surface-content-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELIVERABLE 1: Surface Content Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deliverable-2-capture-reuse-savings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELIVERABLE 2: Capture Reuse &amp; Savings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deliverable-3-generate-savings-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELIVERABLE 3: Generate Savings Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-data-sample-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Data &amp; Sample Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Data &amp; Sample Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-asset-repository-dataverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample Asset Repository (Dataverse)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-scenario-1-content-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Scenario 1: Content Discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-scenario-2-capture-reuse-calculate-savings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Scenario 2: Capture Reuse &amp; Calculate Savings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-scenario-3-generate-monthly-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Scenario 3: Generate Monthly Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-agent-mvp-week-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Agent MVP (Week 1-2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-reuse-capture-week-3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Reuse Capture (Week 3-4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-reporting-week-5-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Reporting (Week 5-6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-integration-handoff-week-7-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Integration &amp; Handoff (Week 7-8)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-criteria-validation-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Criteria (Validation Checklist)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Success Criteria (Validation Checklist)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deliverable-1-content-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deliverable 1: Content Discovery ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deliverable-2-reuse-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deliverable 2: Reuse Capture ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deliverable-3-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deliverable 3: Reporting ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AGENT_TESTING_CHECKLIST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Testing Checklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COPILOT_STUDIO_BUILD_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copilot Studio Build Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="simship-agent-priority-features-test-cases">SimShip Agent - Priority Features &amp; Test Cases<a class="headerlink" href="#simship-agent-priority-features-test-cases" title="Permanent link">&para;</a></h1>
+<h2 id="based-on-meeting-notes-jan-13-16-2026">Based on Meeting Notes (Jan 13 &amp; 16, 2026)<a class="headerlink" href="#based-on-meeting-notes-jan-13-16-2026" title="Permanent link">&para;</a></h2>
+<p><strong>Analysis Date:</strong> January 21, 2026<br />
+<strong>Source:</strong> Simon's Deliverables + Darin's Technical Constraints<br />
+<strong>Status:</strong> Aligned with actual project requirements</p>
+<hr />
+<h2 id="executive-summary">Executive Summary<a class="headerlink" href="#executive-summary" title="Permanent link">&para;</a></h2>
+<p>The meeting notes reveal the <strong>actual priorities</strong> are different from the initial vision. Here's what matters:</p>
+<h3 id="simons-3-core-deliverables-priority-order">Simon's 3 Core Deliverables (PRIORITY ORDER)<a class="headerlink" href="#simons-3-core-deliverables-priority-order" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>TIER 1 (Critical):</strong> Surface Content Sources</li>
+<li>Find &amp; display reusable assets (slides, PDFs, labs, videos)</li>
+<li>Direct access to original sources</li>
+<li>
+<p>Answer: "What content exists on topic X?"</p>
+</li>
+<li>
+<p><strong>TIER 2 (Important):</strong> Capture Reuse &amp; Savings</p>
+</li>
+<li>Track WHEN content is reused</li>
+<li>Ask users "How much time did you save?"</li>
+<li>
+<p>Quantify cost avoidance</p>
+</li>
+<li>
+<p><strong>TIER 3 (Report):</strong> Generate Savings Reports</p>
+</li>
+<li>Dollar-value ROI</li>
+<li>Hours saved aggregates</li>
+<li>Leadership dashboards</li>
+</ol>
+<h3 id="darins-technical-constraints-hard-boundaries">Darin's Technical Constraints (HARD BOUNDARIES)<a class="headerlink" href="#darins-technical-constraints-hard-boundaries" title="Permanent link">&para;</a></h3>
+<p>✅ <strong>APPROVED:</strong>
+- Copilot Studio (primary agent framework)
+- Power Platform (connectors, data flows)
+- SharePoint (document repository)
+- Dataverse (structured metadata)</p>
+<p>❌ <strong>AVOID:</strong>
+- Azure resources (hard no - "creates compliance layers")
+- Code deployment (unless absolutely necessary)
+- Local replicas (keep live sources only)
+- Repository migrations (scan-in-place instead)</p>
+<h3 id="key-insight-from-meeting">Key Insight from Meeting<a class="headerlink" href="#key-insight-from-meeting" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>"The agent needs to read STRUCTURED DATA... we have the solution in place... don't waste time on unstructured stuff."</p>
+</blockquote>
+<p><strong>Translation:</strong> Darin's Power Platform solution is already scanning files and creating metadata. The agent should <strong>consume that metadata</strong>, not reinvent the wheel.</p>
+<hr />
+<h2 id="technology-stack-no-azure">Technology Stack (NO AZURE)<a class="headerlink" href="#technology-stack-no-azure" title="Permanent link">&para;</a></h2>
+<h3 id="recommended-architecture">Recommended Architecture<a class="headerlink" href="#recommended-architecture" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────────┐
+│   Copilot Studio                        │
+│   (Agent Logic &amp; Chat Interface)        │
+└────────────┬────────────────────────────┘
+             │
+             ├─────────────────┬────────────────┐
+             │                 │                │
+             ▼                 ▼                ▼
+        ┌──────────┐    ┌──────────────┐  ┌──────────┐
+        │ Power    │    │ Dataverse    │  │SharePoint│
+        │Platform  │    │ Tables       │  │Connector │
+        │Connector │    │ (Metadata)   │  │          │
+        │          │    │              │  │          │
+        │• Scans   │    │• Structured  │  │• Digital │
+        │• Queries │    │• Asset Info  │  │  Asset   │
+        │• Flows   │    │• Reuse Log   │  │  Repo    │
+        └──────────┘    └──────────────┘  └──────────┘
+</code></pre></div>
+<h3 id="technology-breakdown">Technology Breakdown<a class="headerlink" href="#technology-breakdown" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Technology</th>
+<th>Purpose</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Agent Engine</strong></td>
+<td>Copilot Studio</td>
+<td>Conversational interface</td>
+<td>No code needed</td>
+</tr>
+<tr>
+<td><strong>Data Access</strong></td>
+<td>Power Platform Connector</td>
+<td>Query Dataverse tables</td>
+<td>Existing flows</td>
+</tr>
+<tr>
+<td><strong>Metadata Store</strong></td>
+<td>Dataverse</td>
+<td>Structured asset info</td>
+<td>Already scanning</td>
+</tr>
+<tr>
+<td><strong>Document Source</strong></td>
+<td>SharePoint</td>
+<td>Live documents</td>
+<td>No copying</td>
+</tr>
+<tr>
+<td><strong>Reuse Tracking</strong></td>
+<td>Dataverse table + Power Automate</td>
+<td>Log user reuse</td>
+<td>New flow needed</td>
+</tr>
+<tr>
+<td><strong>Reporting</strong></td>
+<td>Power BI or Power Apps</td>
+<td>Visualize savings</td>
+<td>Consume Dataverse</td>
+</tr>
+<tr>
+<td><strong>Approval/Compliance</strong></td>
+<td>Built-in Power Platform RBAC</td>
+<td>Access control</td>
+<td>No new layer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-this-stack">Why This Stack<a class="headerlink" href="#why-this-stack" title="Permanent link">&para;</a></h3>
+<p>✅ <strong>No Azure</strong> - Everything stays in Power Platform<br />
+✅ <strong>Uses existing infra</strong> - Darin's scanning solution already in place<br />
+✅ <strong>Low code</strong> - Copilot Studio handles chat logic<br />
+✅ <strong>Compliance-friendly</strong> - Already approved by Microsoft<br />
+✅ <strong>Minimal maintenance</strong> - Darin's team owns it  </p>
+<hr />
+<h2 id="simons-3-deliverables-detailed-breakdown">Simon's 3 Deliverables - Detailed Breakdown<a class="headerlink" href="#simons-3-deliverables-detailed-breakdown" title="Permanent link">&para;</a></h2>
+<h3 id="deliverable-1-surface-content-sources">DELIVERABLE 1: Surface Content Sources<a class="headerlink" href="#deliverable-1-surface-content-sources" title="Permanent link">&para;</a></h3>
+<p><strong>What the user asks:</strong>
+<div class="highlight"><pre><span></span><code>&quot;I&#39;m building a new M365 course. What existing content can I reuse on collaboration, 
+document management, and Teams?&quot;
+</code></pre></div></p>
+<p><strong>What the agent returns:</strong>
+<div class="highlight"><pre><span></span><code>Sources Found:
+┌─ Microsoft 365 Collaboration Essentials (PDF, 45 pages)
+│  Source: Sales Skilling SharePoint
+│  Owner: Sarah Chen (sarah.chen@microsoft.com)
+│  Description: Overview of Teams, OneDrive, SharePoint
+│  Specific reusable section: Pages 12-18 (Teams overview)
+│  │
+├─ Teams Administration Lab (hands-on)
+│  Source: Learning Labs
+│  Owner: John Smith (john.smith@microsoft.com)
+│  Description: Step-by-step Teams deployment guide
+│  Duration: 90 minutes
+│  │
+└─ OneDrive Best Practices (Slide Deck, 25 slides)
+   Source: Digital Asset Repository
+   Owner: Jane Wilson (jane.wilson@microsoft.com)
+   Description: File management and sharing in OneDrive
+   Specific reusable section: Slides 8-15 (sharing policies)
+   Direct URL: [Link to SharePoint]
+</code></pre></div></p>
+<p><strong>What needs to work:</strong>
+- [ ] Query Dataverse for assets matching keywords (M365, collaboration, Teams)
+- [ ] Filter by content type (PDF, lab, slides, video)
+- [ ] Show owner contact info
+- [ ] Provide direct links to source documents
+- [ ] Highlight granular reusable pieces (pages/slides/time ranges)
+- [ ] Indicate source location (Sales Skilling vs Digital Asset Repo)</p>
+<p><strong>Data Source:</strong>
+- Power Platform solution's Digital Asset Table (already scanned by Darin's solution)</p>
+<p><strong>Test Case 1A:</strong>
+<div class="highlight"><pre><span></span><code>INPUT: &quot;Find content about Azure security I can add to a new course&quot;
+EXPECTED OUTPUT:
+- 3-5 relevant assets
+- Each with owner name + email
+- Clear description of what&#39;s reusable
+- Direct link to source
+- Time to get result: &lt;2 seconds
+</code></pre></div></p>
+<hr />
+<h3 id="deliverable-2-capture-reuse-savings">DELIVERABLE 2: Capture Reuse &amp; Savings<a class="headerlink" href="#deliverable-2-capture-reuse-savings" title="Permanent link">&para;</a></h3>
+<p><strong>User Journey:</strong></p>
+<div class="highlight"><pre><span></span><code>Step 1: Agent finds content (Deliverable 1)
+Step 2: User says &quot;Yes, I&#39;ll use this&quot;
+Step 3: Agent asks follow-up questions
+  ├─ &quot;How many hours would you have spent creating this?&quot;
+  ├─ &quot;How many people will use this in your course?&quot;
+  └─ &quot;What&#39;s the hourly rate for your team?&quot;
+Step 4: Agent calculates &amp; logs savings
+  └─ Hours Saved: 8
+  └─ Cost Avoided: $1,200 (8 hrs × $150/hr)
+Step 5: Data stored in Dataverse for reporting
+</code></pre></div>
+<p><strong>What the agent captures in Dataverse:</strong>
+<div class="highlight"><pre><span></span><code>Reuse Log Entry:
+├─ Source Asset ID: [GUID]
+├─ Source Title: &quot;Azure Security Best Practices&quot;
+├─ User Who Reused: jane.doe@microsoft.com
+├─ Date of Reuse: 2026-01-21
+├─ Hours Saved: 8
+├─ Cost Avoided: $1,200
+├─ Context: &quot;Added to new M365 security course&quot;
+├─ Team/Department: &quot;Learning &amp; Development&quot;
+└─ Timestamp: 2026-01-21T14:32:00Z
+</code></pre></div></p>
+<p><strong>What needs to work:</strong>
+- [ ] Agent asks for time/cost inputs after finding content
+- [ ] Calculate total cost avoided (hours × rate)
+- [ ] Store in Dataverse table with audit trail
+- [ ] Link back to original asset
+- [ ] Attribution to user/team
+- [ ] Support bulk logging (user reusing multiple assets)</p>
+<p><strong>Data Store:</strong>
+- New Dataverse table: "Content Reuse Log"
+- Fields: asset_id, user_email, hours_saved, cost_avoided, date, context</p>
+<p><strong>Test Case 2A:</strong>
+<div class="highlight"><pre><span></span><code>INPUT: 
+  User finds &quot;Azure Fundamentals&quot; slide deck (8 slides)
+  User action: &quot;I&#39;m using slides 3-5&quot;
+  Hours saved: 6
+  Hourly rate: $150
+
+EXPECTED OUTPUT:
+  ✓ System logs reuse
+  ✓ Calculation: 6 × $150 = $900 cost avoided
+  ✓ Dataverse entry created with timestamp
+  ✓ Confirmation: &quot;Great! You&#39;ve saved 6 hours and $900&quot;
+</code></pre></div></p>
+<p><strong>Test Case 2B:</strong>
+<div class="highlight"><pre><span></span><code>INPUT:
+  User reusing 3 assets in same session
+  Asset 1: 8 hours
+  Asset 2: 4 hours
+  Asset 3: 2 hours
+
+EXPECTED OUTPUT:
+  ✓ Total: 14 hours, $2,100 cost avoided
+  ✓ All 3 reuse entries in Dataverse
+  ✓ Linked to user&#39;s department
+</code></pre></div></p>
+<hr />
+<h3 id="deliverable-3-generate-savings-reports">DELIVERABLE 3: Generate Savings Reports<a class="headerlink" href="#deliverable-3-generate-savings-reports" title="Permanent link">&para;</a></h3>
+<p><strong>Executive Dashboard Report:</strong></p>
+<div class="highlight"><pre><span></span><code>SIMSHIP CONTENT REUSE REPORT
+Period: January 2026
+
+Key Metrics:
+├─ Total Assets Reused: 47
+├─ Total Hours Saved: 156 hours
+├─ Total Cost Avoided: $23,400
+├─ Average Time to Reuse: 4 minutes (from discovery to usage)
+├─ Users Participating: 12
+└─ Teams Benefiting: 4 (L&amp;D, Sales Enablement, Product Training, IT)
+
+Top Reused Content:
+1. &quot;Azure Fundamentals&quot; (PDF)
+   - Reused 8 times
+   - 48 hours saved
+   - $7,200 cost avoided
+   - Owner: Sarah Chen
+
+2. &quot;Teams Administration Lab&quot;
+   - Reused 6 times
+   - 36 hours saved
+   - $5,400 cost avoided
+   - Owner: John Smith
+
+3. &quot;M365 Security Best Practices&quot;
+   - Reused 5 times
+   - 30 hours saved
+   - $4,500 cost avoided
+   - Owner: Jane Wilson
+
+ROI Analysis:
+├─ Content Created (Darin&#39;s scanning): ~40 hours investment
+├─ Cost to Create Agent: ~80 hours
+├─ Total Investment: 120 hours ($18,000)
+├─ Benefit in First Month: $23,400 (156 hours saved)
+└─ Net Benefit: $5,400 in Month 1 (and growing)
+
+Chart 1: Hours Saved by Team
+Chart 2: Cost Avoided by Week
+Chart 3: Asset Reuse Frequency
+Chart 4: Time from Discovery to Reuse (histogram)
+</code></pre></div>
+<p><strong>What needs to work:</strong>
+- [ ] Aggregate reuse data by asset
+- [ ] Sum hours &amp; cost by user/team/timeframe
+- [ ] Rank assets by reuse count
+- [ ] Calculate ROI (benefit - investment cost)
+- [ ] Create visualizations (charts, tables)
+- [ ] Filter by date range, team, asset type
+- [ ] Export to PDF for leadership</p>
+<p><strong>Data Source:</strong>
+- Query Dataverse "Content Reuse Log" table
+- Join with "Digital Asset" table for context</p>
+<p><strong>Test Case 3A:</strong>
+<div class="highlight"><pre><span></span><code>INPUT: 
+  Report request for &quot;Last 30 days, by team&quot;
+
+EXPECTED OUTPUT:
+  ✓ Report with:
+    - Total hours saved: 156
+    - Total cost avoided: $23,400
+    - Breakdown by team
+    - Top 5 assets
+    - Charts showing trends
+    - Generated in &lt;5 seconds
+</code></pre></div></p>
+<p><strong>Test Case 3B:</strong>
+<div class="highlight"><pre><span></span><code>INPUT: 
+  Report request for &quot;Assets reused more than 3 times&quot;
+
+EXPECTED OUTPUT:
+  ✓ List of high-value assets
+  ✓ Reuse count per asset
+  ✓ Total hours/cost per asset
+  ✓ Owner contact info
+  ✓ Suggestion: &quot;Consider these assets for broader promotion&quot;
+</code></pre></div></p>
+<hr />
+<h2 id="test-data-sample-scenarios">Test Data &amp; Sample Scenarios<a class="headerlink" href="#test-data-sample-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="sample-asset-repository-dataverse">Sample Asset Repository (Dataverse)<a class="headerlink" href="#sample-asset-repository-dataverse" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;assets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;asset-001&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Azure Fundamentals&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pdf&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;pages&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;owner_email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sarah.chen@microsoft.com&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Digital Asset Repository&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Complete intro to Azure services&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;keywords&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;azure&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;cloud&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;fundamentals&quot;</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;reusable_sections&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Compute services overview&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;pages&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12-18&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Storage options&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;pages&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;19-25&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;asset-002&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Teams Administration Lab&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;lab&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;duration_minutes&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;owner_email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john.smith@microsoft.com&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Learning Labs&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hands-on Teams deployment&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;keywords&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;teams&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;administration&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;deployment&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;asset-003&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OneDrive Best Practices&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;slides&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;slides&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;owner_email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;jane.wilson@microsoft.com&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Digital Asset Repository&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;File management and sharing&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;keywords&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;onedrive&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;sharepoint&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;files&quot;</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;reusable_sections&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sharing policies&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;slides&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8-15&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="test-scenario-1-content-discovery">Test Scenario 1: Content Discovery<a class="headerlink" href="#test-scenario-1-content-discovery" title="Permanent link">&para;</a></h3>
+<p><strong>User Input:</strong>
+<div class="highlight"><pre><span></span><code>Agent: &quot;Hi! I&#39;m building a new M365 security training course. What existing content 
+        do you have on security, Teams, and collaboration?&quot;
+
+User: &quot;I need beginner-level content that covers security and Teams collaboration&quot;
+</code></pre></div></p>
+<p><strong>Expected Agent Output:</strong>
+<div class="highlight"><pre><span></span><code>Great! I found 3 relevant assets for your M365 security course:
+
+📄 ASSET 1: Teams Administration Lab
+   Type: Hands-on Lab (90 minutes)
+   Owner: John Smith (john.smith@microsoft.com)
+   Source: Learning Labs
+   Description: Step-by-step Teams deployment and security setup
+   Why it&#39;s relevant: Covers Teams security best practices
+   Link: [Direct link to Learning Labs]
+
+🎯 ASSET 2: Azure Security Best Practices  
+   Type: Slide Deck (25 slides)
+   Owner: Sarah Chen (sarah.chen@microsoft.com)
+   Source: Digital Asset Repository
+   Description: Security fundamentals for Azure and Microsoft 365
+   Reusable Sections: Slides 8-15 (Access control and permissions)
+   Link: [Direct link to SharePoint]
+
+📋 ASSET 3: OneDrive Best Practices
+   Type: PDF (45 pages)
+   Owner: Jane Wilson (jane.wilson@microsoft.com)
+   Source: Digital Asset Repository
+   Description: Secure file management in OneDrive
+   Reusable Sections: Pages 19-25 (Sharing &amp; permissions)
+   Link: [Direct link to SharePoint]
+
+Would you like to:
+[ ] Use one of these assets
+[ ] Get more details about an asset
+[ ] Search for other topics
+</code></pre></div></p>
+<hr />
+<h3 id="test-scenario-2-capture-reuse-calculate-savings">Test Scenario 2: Capture Reuse &amp; Calculate Savings<a class="headerlink" href="#test-scenario-2-capture-reuse-calculate-savings" title="Permanent link">&para;</a></h3>
+<p><strong>User Action:</strong>
+<div class="highlight"><pre><span></span><code>User clicks &quot;Use Asset 1 - Teams Administration Lab&quot;
+
+Agent: &quot;Great choice! Let me ask a few quick questions:
+        1. How many hours would it have taken you to create this lab from scratch?
+        2. How many learners will go through this course?
+        3. What&#39;s your hourly rate? (or pick your level: Junior/Mid/Senior)&quot;
+
+User Input:
+  Hours from scratch: 16
+  Learners: 50
+  Hourly rate: $150/hour (Senior L&amp;D Designer)
+</code></pre></div></p>
+<p><strong>Expected System Output:</strong>
+<div class="highlight"><pre><span></span><code>Perfect! Here&#39;s what you&#39;re saving:
+
+💰 Cost Analysis:
+   Hours saved (you): 16 hours
+   Your rate: $150/hour
+   Direct cost avoided: $2,400
+
+   Multiplier effect (50 learners): 
+   If each learner would have spent 1 hour finding/adapting this...
+   Additional hours saved: 50 hours
+   Additional cost avoided: $7,500
+
+   TOTAL: 66 hours saved, $9,900 cost avoided
+
+✅ Logged to reuse tracker
+   Entry ID: reuse-log-2026-01-21-001
+   Saved to: Content Reuse Log
+   Your name: [user_email]
+   Date: 2026-01-21
+
+Would you like to:
+[ ] Log usage of another asset
+[ ] View your savings summary
+[ ] Share this with your team
+</code></pre></div></p>
+<p><strong>Dataverse Table Entry Created:</strong>
+<div class="highlight"><pre><span></span><code>Content Reuse Log Entry:
+{
+  &quot;id&quot;: &quot;reuse-log-2026-01-21-001&quot;,
+  &quot;asset_id&quot;: &quot;asset-002&quot;,
+  &quot;asset_title&quot;: &quot;Teams Administration Lab&quot;,
+  &quot;user_email&quot;: &quot;instructor@microsoft.com&quot;,
+  &quot;user_team&quot;: &quot;Learning &amp; Development&quot;,
+  &quot;date_reused&quot;: &quot;2026-01-21&quot;,
+  &quot;hours_saved&quot;: 16,
+  &quot;cost_avoided&quot;: &quot;$2,400&quot;,
+  &quot;multiplier_effect&quot;: {
+    &quot;learners&quot;: 50,
+    &quot;hours_per_learner&quot;: 1,
+    &quot;total_hours&quot;: 50,
+    &quot;total_cost&quot;: &quot;$7,500&quot;
+  },
+  &quot;total_impact&quot;: {
+    &quot;total_hours&quot;: 66,
+    &quot;total_cost&quot;: &quot;$9,900&quot;
+  },
+  &quot;context&quot;: &quot;Added to new M365 security training course&quot;,
+  &quot;approval_status&quot;: &quot;logged&quot;,
+  &quot;timestamp&quot;: &quot;2026-01-21T14:32:00Z&quot;
+}
+</code></pre></div></p>
+<hr />
+<h3 id="test-scenario-3-generate-monthly-report">Test Scenario 3: Generate Monthly Report<a class="headerlink" href="#test-scenario-3-generate-monthly-report" title="Permanent link">&para;</a></h3>
+<p><strong>Leadership Request:</strong>
+<div class="highlight"><pre><span></span><code>CFO: &quot;I need to see the ROI on the SimShip project. What&#39;s the actual cost savings?&quot;
+
+L&amp;D Manager: Pulls SimShip Report for January 2026
+</code></pre></div></p>
+<p><strong>Expected Report Output:</strong></p>
+<div class="highlight"><pre><span></span><code>═══════════════════════════════════════════════════════════════
+  SIMSHIP AGENT - JANUARY 2026 REUSE &amp; SAVINGS REPORT
+═══════════════════════════════════════════════════════════════
+
+EXECUTIVE SUMMARY
+─────────────────────────────────────────────────────────────
+Period:                January 1-31, 2026
+Total Content Reused:  12 assets
+Reuse Instances:       47 occurrences
+Total Hours Saved:     156 hours
+Total Cost Avoided:    $23,400
+Active Users:          12 L&amp;D designers
+Teams Benefiting:      4 teams
+
+COST-BENEFIT ANALYSIS
+─────────────────────────────────────────────────────────────
+System Development Cost:        $18,000 (120 hours @ $150/hr)
+Asset Scanning Setup:           $8,000 (already done by Darin)
+Monthly Operations:             $2,000 (Darin&#39;s team, 13 hrs)
+
+SUBTOTAL INVESTMENT:            $28,000
+
+Monthly Benefit (Jan):          $23,400 (156 hours @ $150/hr)
+
+MONTH 1 NET:                    -$4,600 (expected - ramping up)
+
+PROJECTED MONTH 3:
+  Assuming 150% growth:         $35,100 benefit
+  ROI: +124% (system pays for itself)
+
+─────────────────────────────────────────────────────────────
+
+TOP REUSED ASSETS (by hours saved)
+─────────────────────────────────────────────────────────────
+1. Azure Fundamentals (PDF, 45 pg)
+   Reused: 8 times        Hours Saved: 64        Cost: $9,600
+   Owner: Sarah Chen      Contact: sarah.chen@microsoft.com
+
+2. Teams Administration Lab (90 min)
+   Reused: 6 times        Hours Saved: 36        Cost: $5,400
+   Owner: John Smith      Contact: john.smith@microsoft.com
+
+3. M365 Security Best Practices (25 slides)
+   Reused: 5 times        Hours Saved: 30        Cost: $4,500
+   Owner: Jane Wilson     Contact: jane.wilson@microsoft.com
+
+4. OneDrive File Management (40 slides)
+   Reused: 4 times        Hours Saved: 16        Cost: $2,400
+   Owner: John Doe        Contact: john.doe@microsoft.com
+
+5. Exchange Administration (PDF, 35 pg)
+   Reused: 3 times        Hours Saved: 10        Cost: $1,500
+   Owner: Mike Brown      Contact: mike.brown@microsoft.com
+
+─────────────────────────────────────────────────────────────
+
+REUSE BY TEAM
+─────────────────────────────────────────────────────────────
+Learning &amp; Development:  32 reuses   $12,800 value
+Sales Enablement:        10 reuses   $7,500 value
+Product Training:         4 reuses   $2,400 value
+IT Operations:            1 reuse    $300 value
+
+─────────────────────────────────────────────────────────────
+
+REUSE TIMELINE (Daily Trend)
+─────────────────────────────────────────────────────────────
+Week 1: 8 reuses         $2,400
+Week 2: 12 reuses        $5,600  (40% growth)
+Week 3: 15 reuses        $7,800  (25% growth)
+Week 4: 12 reuses        $7,600  (slight decline)
+
+OBSERVATIONS:
+✓ Growth trajectory is positive
+✓ Early adoption from 4 key teams
+✓ Content quality appears high (multiple reuses)
+! Some week-to-week variation (normal in month 1)
+
+─────────────────────────────────────────────────────────────
+
+RECOMMENDATIONS
+─────────────────────────────────────────────────────────────
+1. Highlight Azure Fundamentals and Teams Lab as anchor content
+   (8 and 6 reuses respectively - promote to other teams)
+
+2. Contact Sarah Chen and John Smith
+   (Top contributors - opportunity for expanded collaboration)
+
+3. Expand to 2 more teams in Feb
+   (Currently 4 teams; aim for 6 by end of Feb)
+
+4. Promote in all-hands meeting
+   (Data shows real ROI; confidence for funding)
+
+═══════════════════════════════════════════════════════════════
+
+Generated: 2026-01-31T17:00:00Z
+Next Report: 2026-02-28T17:00:00Z
+</code></pre></div>
+<hr />
+<h2 id="implementation-roadmap">Implementation Roadmap<a class="headerlink" href="#implementation-roadmap" title="Permanent link">&para;</a></h2>
+<h3 id="phase-1-agent-mvp-week-1-2">Phase 1: Agent MVP (Week 1-2)<a class="headerlink" href="#phase-1-agent-mvp-week-1-2" title="Permanent link">&para;</a></h3>
+<p><strong>Goal:</strong> Get Deliverable 1 working (Content Discovery)</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Create Copilot Studio agent</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Connect to Dataverse connector (read Digital Asset table)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Implement search by keyword</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Show results with owner contact</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Test with 10 sample queries</li>
+</ul>
+<h3 id="phase-2-reuse-capture-week-3-4">Phase 2: Reuse Capture (Week 3-4)<a class="headerlink" href="#phase-2-reuse-capture-week-3-4" title="Permanent link">&para;</a></h3>
+<p><strong>Goal:</strong> Get Deliverable 2 working (Capture Savings)</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Build new "Content Reuse Log" Dataverse table</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Create Power Automate flow to log reuse</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Agent asks follow-up questions (hours, rate, context)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Calculate and store savings</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Test with 5 different reuse scenarios</li>
+</ul>
+<h3 id="phase-3-reporting-week-5-6">Phase 3: Reporting (Week 5-6)<a class="headerlink" href="#phase-3-reporting-week-5-6" title="Permanent link">&para;</a></h3>
+<p><strong>Goal:</strong> Get Deliverable 3 working (Generate Reports)</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Build Power BI dashboard on Reuse Log data</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Create summary report</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Add monthly/weekly filtering</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Export to PDF capability</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Test with sample reuse data</li>
+</ul>
+<h3 id="phase-4-integration-handoff-week-7-8">Phase 4: Integration &amp; Handoff (Week 7-8)<a class="headerlink" href="#phase-4-integration-handoff-week-7-8" title="Permanent link">&para;</a></h3>
+<p><strong>Goal:</strong> Hand off to Microsoft</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Document architecture (Copilot Studio → Power Platform → SharePoint)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Create step-by-step setup guide</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Package for Microsoft deployment</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Run through validation tests</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Handoff documentation</li>
+</ul>
+<hr />
+<h2 id="success-criteria-validation-checklist">Success Criteria (Validation Checklist)<a class="headerlink" href="#success-criteria-validation-checklist" title="Permanent link">&para;</a></h2>
+<h3 id="deliverable-1-content-discovery">Deliverable 1: Content Discovery ✅<a class="headerlink" href="#deliverable-1-content-discovery" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Agent finds 3+ relevant assets within 2 seconds</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Owner name and email displayed</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Direct link to source provided</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Handles 10+ different keyword searches</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Works with all asset types (PDF, slides, lab, video transcript)</li>
+</ul>
+<h3 id="deliverable-2-reuse-capture">Deliverable 2: Reuse Capture ✅<a class="headerlink" href="#deliverable-2-reuse-capture" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Agent asks for hours/cost input</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Calculates cost avoided correctly</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Stores in Dataverse with audit trail</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Handles single and multi-asset reuse</li>
+<li class="task-list-item"><input type="checkbox" disabled/> User receives confirmation of logged reuse</li>
+</ul>
+<h3 id="deliverable-3-reporting">Deliverable 3: Reporting ✅<a class="headerlink" href="#deliverable-3-reporting" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Report aggregates data correctly</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Shows hours saved and cost avoided</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Ranks assets by reuse frequency</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Displays team/user breakdowns</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Generates in &lt;5 seconds</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Can be exported to PDF</li>
+</ul>
+<hr />
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Clarify Data Access:</strong> Get exact Dataverse connection details from Darin</li>
+<li><strong>Get Sample Data:</strong> Request 20-30 real assets from Digital Asset Repository</li>
+<li><strong>Build Agent Skeleton:</strong> Start with Copilot Studio agent for Deliverable 1</li>
+<li><strong>Create Reuse Table:</strong> Design schema for Content Reuse Log</li>
+<li><strong>Test &amp; Validate:</strong> Run through all 3 test scenarios above</li>
+</ol>
+<hr />
+<p><strong>Status:</strong> Ready to build on Copilot Studio (no Azure needed per Darin's requirement)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 SimShip Team
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/yourusername/simship-agent-docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
