@@ -1,6 +1,7 @@
 site_name: SimShip Agent v2 Documentation
 site_description: Complete documentation for SimShip Content Reuse Agent
 site_author: SimShip Team
+site_url: https://derricksobrien.github.io/simship-agent-docs/
 theme:
   name: material
   palette:
