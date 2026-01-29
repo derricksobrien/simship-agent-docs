@@ -17,6 +17,7 @@ theme:
 
 nav:
   - Home: index.md
+  - Demo Completion: DEMO_COMPLETION_SUMMARY.md
   - Start Here: SIMSHIP_AGENT_V2_START_HERE.md
   - Analysis & Overview: SIMSHIP_AGENT_V2_ANALYSIS_README.md
   - Status Report: SIMSHIP_AGENT_V2_STATUS.md
