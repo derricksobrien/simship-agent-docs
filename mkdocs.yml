@@ -23,6 +23,9 @@ nav:
   - Implementation Checklist: SIMSHIP_AGENT_V2_IMPLEMENTATION_CHECKLIST.md
   - Feature Matrix: SIMSHIP_AGENT_V2_FEATURE_MATRIX.md
   - Delivery Summary: SIMSHIP_AGENT_V2_DELIVERY_SUMMARY.md
+  - Priority Features & Test Cases: PRIORITY_FEATURES_AND_TEST_CASES.md
+  - Agent Testing Checklist: AGENT_TESTING_CHECKLIST.md
+  - Copilot Studio Build Guide: COPILOT_STUDIO_BUILD_GUIDE.md
 
 plugins:
   - search
