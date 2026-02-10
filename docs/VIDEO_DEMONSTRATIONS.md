@@ -4,12 +4,12 @@ This page contains video demonstrations of the SimShip Agent features and workfl
 
 ---
 
-## SimShip Loop: Discover, Reuse, Report
+## SimShip Reuse Project: Value Engine
 
-This video demonstrates the complete SimShip workflow from discovery to reuse and reporting.
+See how the SimShip Reuse Project delivers value through the powerful value engine.
 
-<video width="100%" controls>
-  <source src="videos/SimShip Loop_ Discover, Reuse, Report small.mp4" type="video/mp4">
+<video width="100%" controls preload="metadata">
+  <source src="../videos/SimShip Reuse Project_ Value Engine tiny.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -19,19 +19,19 @@ This video demonstrates the complete SimShip workflow from discovery to reuse an
 
 Learn how to use the intelligent discovery feature with structured metadata search capabilities.
 
-<video width="100%" controls>
-  <source src="videos/Intelligent Discovery_ Structured Metadata Search.mp4" type="video/mp4">
+<video width="100%" controls preload="metadata">
+  <source src="../videos/Intelligent Discovery_ Structured Metadata Search.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 ---
 
-## SimShip Reuse Project: Value Engine
+## SimShip Loop: Discover, Reuse, Report
 
-See how the SimShip Reuse Project delivers value through the powerful value engine.
+This video demonstrates the complete SimShip workflow from discovery to reuse and reporting.
 
-<video width="100%" controls>
-  <source src="videos/SimShip Reuse Project_ Value Engine tiny.mp4" type="video/mp4">
+<video width="100%" controls preload="metadata">
+  <source src="../videos/SimShip Loop_ Discover, Reuse, Report small.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
